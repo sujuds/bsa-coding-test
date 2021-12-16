@@ -1,11 +1,5 @@
 <?php
 
-    function palindrom($string)
-    {
-        return 1;
-    }
-
-
     // $word = "katak";
     // $word = "basi";
     // $word = "isi";
@@ -26,14 +20,14 @@
     // }
 
 
-    // $result2 = "true";
-    // $j = 0;
-    // for ($i=sizeof($split)-1; $i >= 0 ; $i--) {  
-    //     if ($word[$j] != $split[$i]) {
-    //         $result2 = "false";
-    //         break;
-    //     }
-    //     $j++;
-    // }
+    $result2 = "true";
+    $j = 0;
+    for ($i=sizeof($split)-1; $i >= 0 ; $i--) {  
+        if ($word[$j] != $split[$i]) {
+            $result2 = "false";
+            break;
+        }
+        $j++;
+    }
 
-    // echo $result2;
+    echo $result2;
