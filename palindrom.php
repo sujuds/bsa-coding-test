@@ -32,8 +32,6 @@
 
     // echo $result2;
 
-    // echo strlen($word);
-    // echo $word[0];
 
     function palindrome($string, $first, $last){
         if ($last >= 0) {
