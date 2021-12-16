@@ -1,10 +1,10 @@
 <?php
 
-    // $word = "katak";
+    $word = "katak";
     // $word = "basi";
     // $word = "isi";
-    $word = "baai";
-    $split = str_split($word);
+    // $word = "baai";
+    // $split = str_split($word);
 
     // $arr= [];
     // for ($i=sizeof($split)-1; $i >= 0 ; $i--) { 
@@ -20,14 +20,32 @@
     // }
 
 
-    $result2 = "true";
-    $j = 0;
-    for ($i=sizeof($split)-1; $i >= 0 ; $i--) {  
-        if ($word[$j] != $split[$i]) {
-            $result2 = "false";
-            break;
-        }
-        $j++;
-    }
+    // $result2 = "true";
+    // $j = 0;
+    // for ($i=sizeof($split)-1; $i >= 0 ; $i--) {  
+    //     if ($word[$j] != $split[$i]) {
+    //         $result2 = "false";
+    //         break;
+    //     }
+    //     $j++;
+    // }
 
-    echo $result2;
+    // echo $result2;
+
+    // echo strlen($word);
+    // echo $word[0];
+
+    function palindrome($string, $first, $last){
+        if ($last >= 0) {
+            if ($string[$first] == $string[$last]) {
+                $first++;
+                $last--;
+                palindrome($string, $first, $last);
+            } else{
+                return "false";
+            }
+        } 
+        return "true";
+    }
+    echo palindrome($word, 0, strlen($word)-1);
+?>
